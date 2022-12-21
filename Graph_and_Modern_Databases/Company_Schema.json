@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "description": "This JSON stores information about a company and employees working on it.",
+  "required": [
+    "companyId",
+    "companyName",
+    "companyOwners",
+    "address"
+  ],
+  "properties": {
+    "companyId": {
+      "description": "Unique ID for the company.",
+      "type": "integer"
+    },
+    "companyName": {
+      "description": "Name of the company",
+      "type": "string"
+    },
+    "foundedDate": {
+      "description": "Company established year.",
+      "type": "string",
+      "format": "date"
+    },
+    "companyOwners": {
+      "description": "Names of the company owners (must be more than 1).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "description": "Individual owner name.",
+        "type": "string"
+      }
+    },
+    "companyWebSite": {
+      "description": "Website link for the company",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "companyLinkedinURL": {
+      "description": "LinkedIn page URL of the company.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "netWorthInMillion": {
+      "description": "Total worth of the company.",
+      "type": "number"
+    },
+    "address": {
+      "type": "object",
+      "items": {
+        "streetName": {
+          "description": "Street address of the company",
+          "type": "string"
+        },
+        "city": {
+          "description": "City where company is",
+          "type": "string"
+        },
+        "postCode": {
+          "description": "Postal code of the company.",
+          "type": "string"
+        },
+        "country": {
+          "description": "Country",
+          "type": "string"
+        }
+      }
+    },
+    "employees": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$test/employees"
+      }
+    }
+  },
+  "$test": {
+    "employees": {
+      "type": "object",
+      "required": [
+        "employeeId",
+        "isActive",
+        "employeeName",
+        "designation",
+        "skills",
+        "joinDate"
+      ],
+      "properties": {
+        "employeeId": {
+          "description": "Unique identifer for employee (Must start with EMP followed by 3 digits)",
+          "type": "string",
+          "pattern": "EMP[0-9][0-9][0-9]$"
+        },
+        "isActive": {
+          "description": "Flag to determine whether the employee is currently working or not",
+          "type": "boolean"
+        },
+        "employeeName": {
+          "description": "Full name of the employee",
+          "type": "string"
+        },
+        "joinDate": {
+          "description": "Date when the employee joined the company.",
+          "type": "string",
+          "format": "date"
+        },
+        "leaveDate": {
+          "description": "Date when the employee left the company.",
+          "type": "string",
+          "format": "date"
+        },
+        "age": {
+          "description": "Age of employee (Not Required)",
+          "type": "integer",
+          "minimum": 18,
+          "maximum": 55
+        },
+        "gender": {
+          "description": "Gender of employee (Not Required)",
+          "type": "string",
+          "enum": [
+            "Male",
+            "Female",
+            "Others"
+          ]
+        },
+        "designation": {
+          "description": "Position of the employee in the company.",
+          "type": "string"
+        },
+        "skills": {
+          "description": "Skillsets of the individual employees.",
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 10,
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

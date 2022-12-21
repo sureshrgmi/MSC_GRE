@@ -1,0 +1,93 @@
+{
+  "companyId": 1,
+  "companyName": "Abstract LLC",
+  "foundedDate": "2011-01-22",
+  "companyOwners": [
+    "Jessica Doe",
+    "Jacob Doe"
+  ],
+  "companyWebsite": "abstractllc.com",
+  "companyLinkedinURL": null,
+  "netWorthInMillion": 25.6,
+  "address": {
+    "streetName": "Park Row",
+    "city": "London",
+    "postCode": "SE10 9LS",
+    "country": "United Kingdom"
+  },
+  "employees": [
+    {
+      "employeeId": "EMP001",
+      "isActive": true,
+      "employeeName": "John Doe",
+      "joinDate": "2012-01-11",
+      "age": 22,
+      "gender": "Male",
+      "designation": "Backend Developer",
+      "skills": [
+        "Java",
+        "Object Oriented Development",
+        "REST api"
+      ]
+    },
+    {
+      "employeeId": "EMP002",
+      "isActive": true,
+      "employeeName": "Jane Doe",
+      "joinDate": "2015-01-11",
+      "gender": "Female",
+      "designation": "Frontend Developer",
+      "skills": [
+        "Angular",
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "employeeId": "EMP006",
+      "isActive": true,
+      "employeeName": "Harry Mings",
+      "joinDate": "2013-11-01",
+      "age": 25,
+      "gender": "Male",
+      "designation": "Node Js Developer",
+      "skills": [
+        "Node Js",
+        "Object Oriented Development",
+        "Angular",
+        "Frontend Technologies",
+        "GitHub"
+      ]
+    },
+    {
+      "employeeId": "EMP007",
+      "isActive": false,
+      "employeeName": "Alicia Ampadu",
+      "joinDate": "2012-01-01",
+      "leaveDate": "2017-06-01",
+      "gender": "Female",
+      "designation": "Data Analyst",
+      "skills": [
+        "R",
+        "SQL",
+        "Python",
+        "Scala",
+        "ETL"
+      ]
+    },
+    {
+      "employeeId": "EMP008",
+      "isActive": true,
+      "employeeName": "Josh Winks",
+      "joinDate": "2012-03-01",
+      "age": 21,
+      "gender": "Others",
+      "designation": "Python Developer",
+      "skills": [
+        "Python",
+        "Object Oriented Development",
+        "Django"
+      ]
+    }
+  ]
+}
